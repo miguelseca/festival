@@ -1,10 +1,12 @@
+type HamburguerButtonProps = {
+  isMenuOpen: boolean;
+  handleOpenFunction: () => void;
+};
+
 export default function HamburguerButton({
   isMenuOpen,
   handleOpenFunction,
-}: {
-  isMenuOpen: boolean;
-  handleOpenFunction: any;
-}) {
+}: HamburguerButtonProps) {
   return (
     <button
       onClick={handleOpenFunction}

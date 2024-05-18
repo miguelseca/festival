@@ -8,6 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        wavey: {
+          "0%,100%": {
+            transform: "scaleY(0.5)",
+          },
+          "50%": {
+            transform: "scaleY(1.5)",
+          },
+        },
+      },
+      animation: {
+        wavey: "wavey 1000ms linear infinite",
+      },
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +29,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("./plugins/openVariant")],
+  plugins: [],
 };
 export default config;
