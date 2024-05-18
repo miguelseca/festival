@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,20 +9,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      keyframes: {
-        wavey: {
-          "0%,100%": {
-            transform: "scaleY(0.5)",
-          },
-          "50%": {
-            transform: "scaleY(1.5)",
-          },
-        },
-      },
-      animation: {
-        wavey: "wavey 1000ms linear infinite",
-      },
-
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

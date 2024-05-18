@@ -1,0 +1,31 @@
+.animated-element-1 {
+  animation: scaleYAnimation 1s linear 0ms infinite;
+}
+
+.animated-element-2 {
+  animation: scaleYAnimation 1s linear 200ms infinite;
+}
+
+.animated-element-3 {
+  animation: scaleYAnimation 1s linear 150ms infinite;
+}
+
+.animated-element-4 {
+  animation: scaleYAnimation 1s linear 300ms infinite;
+}
+
+.animated-element-5 {
+  animation: scaleYAnimation 1s linear 75ms infinite;
+}
+
+@keyframes scaleYAnimation {
+  0% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+  100% {
+    transform: scaleY(0.5);
+  }
+}

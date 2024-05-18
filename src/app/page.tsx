@@ -1,8 +1,14 @@
-import Navbar from "@/components/NavigationBar";
+import AnimatedLogo from "@/components/AnimatedLogo";
+import HeadLines from "@/components/HeadLines";
+import Navbar from "@/components/NavigationBar/NavigationBar";
+import ThemeToggleButton from "@/components/ThemeToggleButton";
+import TicketsTable from "@/components/TicketsTable";
+import TimeLine from "@/components/TimeLine";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-zinc-200 dark:bg-zinc-900">
+      <ThemeToggleButton />
       <Navbar />
 
       <div
@@ -13,18 +19,7 @@ export default function Home() {
           <div className="relative">
             <img src="/images/logo.png" width={175}></img>
 
-
-
-
-            <div className="item-center flex justify-center mt-[-70px] mb-5">
-              <div className="h-14 w-14 bg-pink-500 rounded-full flex items-center justify-center gap-1">
-                <div className="h-2 w-1 bg-pink-300 rounded-full animate-wavey"></div>
-                <div className="h-3 w-1 bg-pink-200 rounded-full animate-wavey"></div>
-                <div className="h-4 w-1 bg-pink-100 rounded-full animate-wavey"></div>
-                <div className="h-3 w-1 bg-pink-200 rounded-full animate-wavey"></div>
-                <div className="h-2 w-1 bg-pink-300 rounded-full animate-wavey"></div>
-              </div>
-            </div>
+            <AnimatedLogo />
           </div>
           <div className="text-5xl font-bold">
             tw:<span className="text-sky-900">mf</span>
@@ -46,11 +41,14 @@ export default function Home() {
             type="submit"
             className="cursor-pointer rounded-sm bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20"
           >
-            
             Subscribe
           </button>
         </form>
       </div>
-    </>
+
+      <HeadLines />
+      <TimeLine />
+      <TicketsTable />
+    </div>
   );
 }
